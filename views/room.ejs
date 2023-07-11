@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script>
+      const ROOM_ID = "<%= roomId %>";
+    </script>
+    <script
+      src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"
+      defer
+    ></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="script.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        min-width: 350px;
+        height: 100vh;
+        padding: 25px;
+        background-color: beige;
+        display: flex;
+        justify-content: center;
+      }
+
+      #videoFlex {
+        width: 100%;
+        max-width: 700px;
+        height: 100%;
+        background-color: red;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+
+      video {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        transform: scaleX(-1);
+        border-radius: 10px;
+        box-shadow: 0 5px 10px #00000033;
+        margin: 10px;
+      }
+    </style>
+    <title>FaceTime</title>
+  </head>
+  <body>
+    <div id="videoFlex"></div>
+  </body>
+</html>
